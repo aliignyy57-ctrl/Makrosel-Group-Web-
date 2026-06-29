@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim | Makrosel Group</title>
+<meta name="description" content="Makrosel Group ile iletişime geçin. Tıbbi tanı ürünleri, teknik destek ve fiyat teklifi için 7/24 hizmetinizdeyiz. İstanbul Çekmeköy.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1a3a6b',
+          'navy-dark': '#0a1628',
+          'navy-light': '#1e4d8c',
+          crimson: '#e63946',
+          'crimson-dark': '#c1121f',
+        },
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .mega-trigger:hover .mega-menu, .mega-menu:hover { display: grid; }
+  .elisa-trigger:hover .elisa-sub, .elisa-sub:hover { display: block; }
+  .nav-link::after { content:''; display:block; height:2px; background:#e63946; transform:scaleX(0); transition:transform .2s ease; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  #mobile-menu { display:none; }
+  #mobile-menu.open { display:block; }
+
+  /* Form inputs */
+  .form-input {
+    width: 100%; padding: 0.75rem 1rem;
+    background: #f9fafb; border: 1.5px solid #e5e7eb;
+    border-radius: 0.75rem; font-size: 0.875rem; color: #111827;
+    transition: border-color .2s, box-shadow .2s;
+    outline: none;
+  }
+  .form-input:focus {
+    border-color: #1a3a6b;
+    box-shadow: 0 0 0 3px rgba(26,58,107,0.12);
+    background: #fff;
+  }
+  .form-input::placeholder { color: #9ca3af; }
+
+  /* Info card hover */
+  .info-card { transition: transform .2s, box-shadow .2s; }
+  .info-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,58,107,.1); }
+
+  /* Pulse dot */
+  @keyframes pulse-ring { 0% { transform:scale(.8); opacity:1; } 100% { transform:scale(1.6); opacity:0; } }
+  .pulse-dot::before {
+    content:''; position:absolute; inset:-4px; border-radius:50%;
+    background: rgba(230,57,70,.4); animation: pulse-ring 1.5s infinite;
+  }
+
+  /* Hero grid */
+  .hero-grid { background-image: linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:60px 60px; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#111111] border-b border-white/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-18 py-4">
+
+      <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-8 h-8 bg-crimson rounded flex items-center justify-center">
+          <span class="text-white font-black text-sm">M</span>
+        </div>
+        <span class="text-white font-bold text-xl tracking-tight">Makrosel <span class="text-gray-400 font-light">Group</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1">
+
+        <!-- Ürünler -->
+        <div class="mega-trigger relative">
+          <button class="nav-link flex items-center gap-1 text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">
+            Ürünler <span class="material-symbols-outlined text-[16px] leading-none">expand_more</span>
+          </button>
+          <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[780px] bg-[#1a1a1a] border border-white/10 rounded-b-2xl shadow-2xl p-8 grid-cols-3 gap-8 z-50">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Kitler</p>
+              <ul class="space-y-0.5">
+                <li class="elisa-trigger relative">
+                  <a href="elisa-kitleri.html" class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group">
+                    <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>ELİSA Kitleri</span>
+                    <span class="material-symbols-outlined text-[14px] text-gray-600 group-hover:text-crimson">chevron_right</span>
+                  </a>
+                  <div class="elisa-sub hidden absolute left-full top-0 w-52 bg-[#222] border border-white/10 rounded-xl shadow-2xl p-4 z-50">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-crimson mb-3">Türe Göre</p>
+                    <ul class="space-y-0.5">
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">İnsan Elisa Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Fare - Mouse</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Sıçan - Rat</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Sığır - Bovine</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">At Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Koyun / Keçi</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Tavuk / Ördek</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Köpek / Kedi</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Üre Nefes Testi</a></li>
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Biyokimya Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Allerji Testleri</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Cihazlar</p>
+              <ul class="space-y-1">
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Cihazları</a></li>
+                <li><a href="veteriner-kan-gazi.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Veteriner Kan Gazı</a></li>
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Üre Nefes Test Cihazı</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Biyokimya Cihazları</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>X-Ray Cihazları</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Elisa Okuyucular</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Diğer</p>
+              <ul class="space-y-1 mb-6">
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>İkinci El Cihazlar</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Solüsyonları</a></li>
+              </ul>
+              <div class="border-t border-white/10 pt-6">
+                <p class="text-white font-semibold text-sm mb-1">Tüm Ürün Kataloğu</p>
+                <p class="text-gray-500 text-xs mb-4">500+ ürün ile tam katalog</p>
+                <a href="urunler.html" class="inline-flex items-center gap-2 bg-crimson text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-crimson-dark transition-colors">
+                  Kataloğu İncele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hakkımızda -->
+        <div class="mega-trigger relative">
+          <button class="nav-link flex items-center gap-1 text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">
+            Hakkımızda <span class="material-symbols-outlined text-[16px] leading-none">expand_more</span>
+          </button>
+          <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[520px] bg-[#1a1a1a] border border-white/10 rounded-b-2xl shadow-2xl p-8 grid-cols-2 gap-8 z-50">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Kurumsal</p>
+              <ul class="space-y-0.5">
+                <li><a href="hakkimizda.html#biz-kimiz" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Biz Kimiz?</a></li>
+                <li><a href="hakkimizda.html#yonetim-kurulu" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Yönetim Kurulu</a></li>
+                <li><a href="hakkimizda.html#gecmisten-gunumuze" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Geçmişten Günümüze</a></li>
+                <li><a href="hakkimizda.html#politikalarimiz" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Politikalarımız</a></li>
+                <li><a href="hakkimizda.html#vizyon-misyon" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Vizyon ve Misyon</a></li>
+                <li><a href="hakkimizda.html#etik-degerler" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Etik ve Ahlaki Değerlerimiz</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Daha Fazla</p>
+              <ul class="space-y-0.5">
+                <li><a href="hakkimizda.html#belgelerimiz" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Belgelerimiz</a></li>
+                <li><a href="hakkimizda.html#surdurulebilirlik" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Sürdürülebilirlik</a></li>
+                <li><a href="hakkimizda.html#sosyal-sorumluluk" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Sosyal Sorumluluk</a></li>
+                <li><a href="hakkimizda.html#kariyer" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kariyer</a></li>
+                <li><a href="blog.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Blog</a></li>
+                <li><a href="iletisim.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>İletişim</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a href="index.html#markalar" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Markalar</a>
+        <a href="urunler.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Blog</a>
+        <a href="iletisim.html" class="nav-link text-white text-sm font-semibold px-4 py-2 rounded transition-colors border-b-2 border-crimson">İletişim</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+902166062939" class="text-gray-400 hover:text-white text-sm font-medium px-3 py-2 transition-colors hidden xl:flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">call</span>0216 606 29 39
+        </a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="bg-crimson hover:bg-crimson-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">Teklif Al</a>
+      </div>
+
+      <button id="hamburger" class="lg:hidden text-gray-300 hover:text-white p-2" aria-label="Menü">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden bg-[#1a1a1a] border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 space-y-3">
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1">ELİSA Kitleri</a>
+      <a href="pe-7100-lazer-kan-sayim.html" class="block text-gray-400 hover:text-white py-1">Kan Sayım Cihazları</a>
+      <a href="urunler.html" class="block text-gray-400 hover:text-white py-1">Tüm Ürünler</a>
+      <div class="border-t border-white/10 pt-3 space-y-2">
+        <a href="hakkimizda.html" class="block text-gray-300 hover:text-white py-1">Hakkımızda</a>
+        <a href="iletisim.html" class="block text-white font-semibold py-1">İletişim</a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="inline-block bg-crimson text-white font-semibold px-5 py-2.5 rounded-lg mt-2">Teklif Al</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="relative bg-[#0a1628] overflow-hidden pt-32 pb-20">
+  <div class="absolute inset-0 hero-grid opacity-100"></div>
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-crimson/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+  <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-navy/50 rounded-full blur-3xl translate-y-1/2"></div>
+  <div class="absolute top-1/2 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-sm text-gray-500 mb-10">
+      <a href="index.html" class="hover:text-gray-300 transition-colors">Ana Sayfa</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-gray-300 font-medium">İletişim</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 bg-crimson/15 border border-crimson/20 text-crimson text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+          <span class="relative w-2 h-2 pulse-dot">
+            <span class="block w-2 h-2 bg-crimson rounded-full"></span>
+          </span>
+          Uzman Ekip · 7/24 Aktif
+        </span>
+        <h1 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-5">
+          Bizimle<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">İletişime</span><br>
+          Geçin
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+          Uzman ekibimiz tıbbi tanı ürünleri, teknik destek ve fiyat teklifi konularında 7/24 hizmetinizdedir. Mesajınızı bırakın, en kısa sürede dönelim.
+        </p>
+        <!-- Quick contact chips -->
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:+902166062939" class="inline-flex items-center gap-2 bg-white/8 hover:bg-white/15 border border-white/15 text-white text-sm font-medium px-4 py-2.5 rounded-xl transition-all">
+            <span class="material-symbols-outlined text-crimson text-[18px]">call</span>
+            0216 606 29 39
+          </a>
+          <a href="mailto:info@makroselgroup.com" class="inline-flex items-center gap-2 bg-white/8 hover:bg-white/15 border border-white/15 text-white text-sm font-medium px-4 py-2.5 rounded-xl transition-all">
+            <span class="material-symbols-outlined text-blue-400 text-[18px]">mail</span>
+            info@makroselgroup.com
+          </a>
+          <a href="tel:+905074299021" class="inline-flex items-center gap-2 bg-crimson/15 hover:bg-crimson/25 border border-crimson/25 text-crimson text-sm font-semibold px-4 py-2.5 rounded-xl transition-all">
+            <span class="material-symbols-outlined text-[18px]">emergency</span>
+            Acil Hat
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero stats -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="material-symbols-outlined text-white text-[24px]">timer</span>
+          </div>
+          <div class="text-2xl font-black text-white mb-1">&lt; 2 saat</div>
+          <div class="text-xs text-gray-400">Ortalama Yanıt Süresi</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 bg-crimson/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="material-symbols-outlined text-crimson text-[24px]">support_agent</span>
+          </div>
+          <div class="text-2xl font-black text-white mb-1">7/24</div>
+          <div class="text-xs text-gray-400">Teknik Destek</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="material-symbols-outlined text-green-400 text-[24px]">verified</span>
+          </div>
+          <div class="text-2xl font-black text-white mb-1">1000+</div>
+          <div class="text-xs text-gray-400">Mutlu Müşteri</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="material-symbols-outlined text-blue-400 text-[24px]">star</span>
+          </div>
+          <div class="text-2xl font-black text-white mb-1">20+</div>
+          <div class="text-xs text-gray-400">Yıllık Tecrübe</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ANA İÇERİK ═══════════════ -->
+<section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+  <div class="grid lg:grid-cols-[1fr_420px] gap-10 items-start">
+
+    <!-- SOL KOLON: İletişim Formu -->
+    <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 lg:p-10">
+      <div class="mb-8">
+        <span class="inline-block bg-navy/8 text-navy text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3">Mesaj Gönder</span>
+        <h2 class="text-2xl font-black text-gray-900">Bize Yazın</h2>
+        <p class="text-gray-500 text-sm mt-1">Tüm alanları doldurarak mesajınızı iletebilirsiniz.</p>
+      </div>
+
+      <form id="contact-form" class="space-y-5" onsubmit="sendMail(event)">
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Ad Soyad <span class="text-crimson">*</span></label>
+            <input id="f-name" type="text" class="form-input" placeholder="Örn: Ahmet Yılmaz" required>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">E-posta <span class="text-crimson">*</span></label>
+            <input id="f-email" type="email" class="form-input" placeholder="ornek@firma.com" required>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Telefon</label>
+            <input id="f-phone" type="tel" class="form-input" placeholder="0212 000 00 00">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Konu <span class="text-crimson">*</span></label>
+            <select id="f-konu" class="form-input" required>
+              <option value="" disabled selected>Konu seçin...</option>
+              <option value="Ürün Bilgisi">Ürün Bilgisi</option>
+              <option value="Teknik Destek">Teknik Destek</option>
+              <option value="Fiyat Teklifi">Fiyat Teklifi</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Mesajınız <span class="text-crimson">*</span></label>
+          <textarea id="f-mesaj" class="form-input resize-none" rows="6" placeholder="Mesajınızı buraya yazın..." required></textarea>
+        </div>
+
+        <!-- Gizlilik notu -->
+        <p class="text-xs text-gray-400 leading-relaxed">
+          <span class="material-symbols-outlined text-[13px] align-middle mr-1">lock</span>
+          Bilgileriniz yalnızca talebinizi yanıtlamak için kullanılır ve üçüncü taraflarla paylaşılmaz.
+        </p>
+
+        <button type="submit"
+          class="w-full flex items-center justify-center gap-2 bg-crimson hover:bg-crimson-dark text-white font-bold px-6 py-4 rounded-xl transition-all shadow-lg shadow-crimson/25 hover:shadow-crimson/40 text-sm">
+          <span class="material-symbols-outlined text-[20px]">send</span>
+          Mesaj Gönder
+        </button>
+      </form>
+
+      <!-- Başarı mesajı (form submit sonrası) -->
+      <div id="form-success" class="hidden mt-6 flex items-center gap-3 bg-green-50 border border-green-200 text-green-700 rounded-xl p-4 text-sm">
+        <span class="material-symbols-outlined text-green-500 text-[22px]">check_circle</span>
+        <span>E-posta uygulamanız açıldı. Mesajınızı göndermek için <strong>Gönder</strong>'e tıklayın.</span>
+      </div>
+
+      <!-- Alternatif iletişim -->
+      <div class="mt-8 pt-6 border-t border-gray-100">
+        <p class="text-xs text-gray-400 text-center mb-4">veya doğrudan ulaşın</p>
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <a href="tel:+902166062939" class="group p-3 rounded-xl border border-gray-100 hover:border-navy/30 hover:bg-navy/3 transition-all">
+            <span class="material-symbols-outlined text-navy text-[22px] block mb-1">call</span>
+            <span class="text-xs text-gray-500 group-hover:text-navy transition-colors">Telefon</span>
+          </a>
+          <a href="mailto:info@makroselgroup.com" class="group p-3 rounded-xl border border-gray-100 hover:border-navy/30 hover:bg-navy/3 transition-all">
+            <span class="material-symbols-outlined text-navy text-[22px] block mb-1">mail</span>
+            <span class="text-xs text-gray-500 group-hover:text-navy transition-colors">E-posta</span>
+          </a>
+          <a href="https://wa.me/905074299021" target="_blank" rel="noopener" class="group p-3 rounded-xl border border-gray-100 hover:border-green-300 hover:bg-green-50 transition-all">
+            <span class="material-symbols-outlined text-green-600 text-[22px] block mb-1">chat</span>
+            <span class="text-xs text-gray-500 group-hover:text-green-600 transition-colors">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAĞ KOLON: İletişim Bilgileri -->
+    <div class="space-y-4">
+
+      <!-- Adres kartı -->
+      <div class="info-card bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-navy/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-navy text-[22px]">location_on</span>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-gray-900 mb-1">Adres</div>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Mimar Sinan Mah. Çağlayan Sok. 9/5<br>
+              <span class="font-medium text-gray-800">34782 Çekmeköy / İstanbul</span>
+            </p>
+            <a href="https://maps.google.com/?q=Mimar+Sinan+Mahallesi+Caglayang+Sokak+9+Cekmekoy+Istanbul"
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1 text-navy text-xs font-semibold mt-2 hover:underline">
+              Haritada Gör <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telefon kartı -->
+      <div class="info-card bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-11 h-11 bg-navy/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-navy text-[22px]">call</span>
+          </div>
+          <div class="flex-1">
+            <div class="text-sm font-bold text-gray-900 mb-3">Telefon</div>
+            <div class="space-y-2.5">
+              <a href="tel:+902166062939" class="flex items-center justify-between group">
+                <div>
+                  <div class="text-sm font-semibold text-gray-800 group-hover:text-navy transition-colors">0(216) 606 29 39</div>
+                  <div class="text-xs text-gray-400">Ana Hat</div>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 group-hover:text-navy text-[18px] transition-colors">arrow_forward</span>
+              </a>
+              <div class="h-px bg-gray-50"></div>
+              <a href="tel:+908503045606" class="flex items-center justify-between group">
+                <div>
+                  <div class="text-sm font-semibold text-gray-800 group-hover:text-navy transition-colors">0(850) 304 56 06</div>
+                  <div class="text-xs text-gray-400">Sabit Hat</div>
+                </div>
+                <span class="material-symbols-outlined text-gray-300 group-hover:text-navy text-[18px] transition-colors">arrow_forward</span>
+              </a>
+              <div class="h-px bg-gray-50"></div>
+              <a href="tel:+905074299021" class="flex items-center justify-between group">
+                <div>
+                  <div class="text-sm font-bold text-crimson">+90 507 429 90 21</div>
+                  <div class="text-xs text-crimson/70 font-semibold">Acil Hat — 7/24</div>
+                </div>
+                <span class="w-8 h-8 bg-crimson/10 rounded-lg flex items-center justify-center">
+                  <span class="material-symbols-outlined text-crimson text-[16px]">emergency</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-posta kartı -->
+      <div class="info-card bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 bg-navy/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-navy text-[22px]">mail</span>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-gray-900 mb-1">E-posta</div>
+            <a href="mailto:info@makroselgroup.com" class="text-navy text-sm font-semibold hover:underline">info@makroselgroup.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Çalışma Saatleri kartı (koyu arka plan) -->
+      <div class="bg-[#0a1628] rounded-2xl p-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-crimson/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-[20px]">schedule</span>
+            </div>
+            <div class="text-sm font-bold text-white">Çalışma Saatleri</div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                <span class="text-gray-400 text-sm">Hafta İçi</span>
+              </div>
+              <span class="text-white text-sm font-semibold">09:00 – 18:00</span>
+            </div>
+            <div class="h-px bg-white/5"></div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-yellow-400 rounded-full"></span>
+                <span class="text-gray-400 text-sm">Cumartesi</span>
+              </div>
+              <span class="text-white text-sm font-semibold">09:00 – 13:00</span>
+            </div>
+            <div class="h-px bg-white/5"></div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-crimson rounded-full animate-pulse"></span>
+                <span class="text-gray-300 text-sm font-semibold">Teknik Servis</span>
+              </div>
+              <span class="text-crimson text-sm font-bold">7/24 Aktif</span>
+            </div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10">
+            <a href="tel:+905074299021"
+               class="w-full flex items-center justify-center gap-2 bg-crimson hover:bg-crimson-dark text-white font-bold text-sm px-4 py-3 rounded-xl transition-colors">
+              <span class="material-symbols-outlined text-[18px]">emergency</span>
+              Acil Hat: +90 507 429 90 21
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sosyal / Hızlı Bağlantılar -->
+      <div class="info-card bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Hızlı Bağlantılar</div>
+        <div class="space-y-2">
+          <a href="urunler.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+            <span class="material-symbols-outlined text-navy text-[18px]">inventory_2</span>
+            <span class="text-sm text-gray-700 group-hover:text-navy transition-colors">Ürün Kataloğu</span>
+            <span class="material-symbols-outlined text-gray-300 text-[16px] ml-auto">arrow_forward</span>
+          </a>
+          <a href="markalar/bostonchem.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+            <span class="material-symbols-outlined text-navy text-[18px]">science</span>
+            <span class="text-sm text-gray-700 group-hover:text-navy transition-colors">Bostonchem ELISA Kitleri</span>
+            <span class="material-symbols-outlined text-gray-300 text-[16px] ml-auto">arrow_forward</span>
+          </a>
+          <a href="hakkimizda.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+            <span class="material-symbols-outlined text-navy text-[18px]">info</span>
+            <span class="text-sm text-gray-700 group-hover:text-navy transition-colors">Hakkımızda</span>
+            <span class="material-symbols-outlined text-gray-300 text-[16px] ml-auto">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HARİTA ═══════════════ -->
+<section class="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+  <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+    <!-- Harita başlık -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-navy/10 rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined text-navy text-[20px]">map</span>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-gray-900">Konumumuz</div>
+          <div class="text-xs text-gray-400">Mimar Sinan Mah. Çağlayan Sok. 9/5, Çekmeköy / İstanbul</div>
+        </div>
+      </div>
+      <a href="https://maps.google.com/?q=Cekmekoy+Istanbul" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-1.5 text-navy text-xs font-semibold hover:underline">
+        Büyük Haritada Aç <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+      </a>
+    </div>
+    <!-- Google Maps Embed -->
+    <div class="h-[420px] w-full">
+      <iframe
+        src="https://maps.google.com/maps?q=Cekmekoy+Istanbul+Turkey&output=embed&z=14&hl=tr"
+        width="100%" height="100%"
+        style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Makrosel Group Konum - Çekmeköy İstanbul">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="bg-[#0d0d0d] border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 bg-crimson rounded flex items-center justify-center">
+            <span class="text-white font-black text-sm">M</span>
+          </div>
+          <span class="text-white font-bold text-xl">Makrosel <span class="text-gray-500 font-light">Group</span></span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Tıbbi tanı ve laboratuvar çözümlerinde 20 yılı aşkın deneyim. Türkiye'nin güvenilir tıbbi tanı tedarikçisi.</p>
+        <div class="flex gap-3">
+          <a href="mailto:info@makroselgroup.com" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+          </a>
+          <a href="tel:+908503045606" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-[18px]">call</span>
+          </a>
+          <a href="https://wa.me/905074299021" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Ürünler</h4>
+        <ul class="space-y-3">
+          <li><a href="elisa-kitleri.html" class="text-gray-500 hover:text-white text-sm transition-colors">ELİSA Kitleri</a></li>
+          <li><a href="pe-7100-lazer-kan-sayim.html" class="text-gray-500 hover:text-white text-sm transition-colors">Kan Sayım Cihazları</a></li>
+          <li><a href="veteriner-kan-gazi.html" class="text-gray-500 hover:text-white text-sm transition-colors">Veteriner Ürünleri</a></li>
+          <li><a href="ure-nefes-testi-c13.html" class="text-gray-500 hover:text-white text-sm transition-colors">Üre Nefes Testi</a></li>
+          <li><a href="urunler.html" class="text-gray-500 hover:text-white text-sm transition-colors">Biyokimya Kitleri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Markalar</h4>
+        <ul class="space-y-3">
+          <li><a href="markalar/sinogeneclon.html" class="text-gray-500 hover:text-white text-sm transition-colors">SinoGeneclon</a></li>
+          <li><a href="markalar/krishgen.html" class="text-gray-500 hover:text-white text-sm transition-colors">Krishgen</a></li>
+          <li><a href="markalar/diatek.html" class="text-gray-500 hover:text-white text-sm transition-colors">DIATEK</a></li>
+          <li><a href="markalar/getein.html" class="text-gray-500 hover:text-white text-sm transition-colors">Getein</a></li>
+          <li><a href="markalar/bostonchem.html" class="text-gray-500 hover:text-white text-sm transition-colors">Bostonchem</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">İletişim</h4>
+        <ul class="space-y-4">
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] mt-0.5 flex-shrink-0">location_on</span>
+            <span class="text-gray-500 text-sm leading-relaxed">Mimar Sinan Mah. Çağlayan Sok. 9/5<br>34782 Çekmeköy / İstanbul</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">call</span>
+            <div class="flex flex-col gap-0.5">
+              <a href="tel:+902166062939" class="text-gray-400 hover:text-white text-sm transition-colors font-medium">0(216) 606 29 39</a>
+              <a href="tel:+908503045606" class="text-gray-500 hover:text-white text-sm transition-colors">0(850) 304 56 06</a>
+              <a href="tel:+905074299021" class="text-gray-500 hover:text-white text-xs transition-colors">+90 507 429 90 21 <span class="text-crimson">(Acil)</span></a>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">mail</span>
+            <a href="mailto:info@makroselgroup.com" class="text-gray-500 hover:text-white text-sm transition-colors">info@makroselgroup.com</a>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">schedule</span>
+            <span class="text-gray-500 text-sm">Hft içi 09:00–18:00<br>Cumartesi 09:00–13:00<br><span class="text-crimson font-medium">Teknik Servis 7/24</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+      <p>© 2024 Makrosel Group. Tüm hakları saklıdır.</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@makroselgroup.com" class="hover:text-gray-400 transition-colors">Gizlilik Politikası</a>
+        <a href="mailto:info@makroselgroup.com" class="hover:text-gray-400 transition-colors">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    if (window.scrollY > 40) {
+      nav.classList.add('shadow-xl', 'shadow-black/40');
+    } else {
+      nav.classList.remove('shadow-xl', 'shadow-black/40');
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.mega-trigger')) {
+      document.querySelectorAll('.mega-menu').forEach(function(m) { m.style.display = ''; });
+    }
+  });
+
+  // Form → mailto
+  function sendMail(e) {
+    e.preventDefault();
+    var name  = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var konu  = document.getElementById('f-konu').value;
+    var mesaj = document.getElementById('f-mesaj').value.trim();
+
+    if (!name || !email || !konu || !mesaj) return;
+
+    var subject = encodeURIComponent('[' + konu + '] ' + name + ' - Makrosel Group Web');
+    var body = encodeURIComponent(
+      'Ad Soyad : ' + name + '\n' +
+      'E-posta  : ' + email + '\n' +
+      'Telefon  : ' + (phone || '—') + '\n' +
+      'Konu     : ' + konu + '\n\n' +
+      'Mesaj:\n' + mesaj + '\n\n' +
+      '---\nBu mesaj makroselgroup.com iletişim formu üzerinden gönderilmiştir.'
+    );
+
+    window.location.href = 'mailto:info@makroselgroup.com?subject=' + subject + '&body=' + body;
+    document.getElementById('form-success').classList.remove('hidden');
+    document.getElementById('form-success').classList.add('flex');
+  }
+</script>
+</body>
+</html>
