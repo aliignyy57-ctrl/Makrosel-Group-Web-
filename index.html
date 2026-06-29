@@ -410,17 +410,17 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
 
       <div class="bg-[#1a1a1a] p-8 text-center">
-        <p class="text-4xl lg:text-5xl font-black text-white mb-2">500<span class="text-crimson">+</span></p>
+        <p class="text-4xl lg:text-5xl font-black text-white mb-2"><span id="stat-urun">0</span><span class="text-crimson">+</span></p>
         <p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Ürün Çeşidi</p>
       </div>
 
       <div class="bg-[#1a1a1a] p-8 text-center">
-        <p class="text-4xl lg:text-5xl font-black text-white mb-2">20<span class="text-crimson">+</span></p>
+        <p class="text-4xl lg:text-5xl font-black text-white mb-2"><span id="stat-yil">0</span><span class="text-crimson">+</span></p>
         <p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Yıl Deneyim</p>
       </div>
 
       <div class="bg-[#1a1a1a] p-8 text-center">
-        <p class="text-4xl lg:text-5xl font-black text-white mb-2">50<span class="text-crimson">+</span></p>
+        <p class="text-4xl lg:text-5xl font-black text-white mb-2"><span id="stat-marka">0</span><span class="text-crimson">+</span></p>
         <p class="text-gray-400 text-sm font-medium uppercase tracking-wider">Global Marka</p>
       </div>
 
@@ -954,6 +954,48 @@
       document.querySelectorAll('.mega-menu').forEach(m => m.style.display = '');
     }
   });
+
+  // Stat counter animation with ease-out
+  (function() {
+    var counters = [
+      { id: 'stat-urun',  target: 500, duration: 2000 },
+      { id: 'stat-yil',   target: 20,  duration: 1500 },
+      { id: 'stat-marka', target: 50,  duration: 1500 },
+    ];
+    var animated = false;
+
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animateCounter(el, target, duration) {
+      var start = performance.now();
+      function tick(now) {
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        el.textContent = Math.floor(easeOut(progress) * target);
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function startAll() {
+      if (animated) return;
+      animated = true;
+      counters.forEach(function(c) {
+        var el = document.getElementById(c.id);
+        if (el) animateCounter(el, c.target, c.duration);
+      });
+    }
+
+    var statsSection = document.querySelector('#stat-urun').closest('section');
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        startAll();
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    observer.observe(statsSection);
+  })();
 </script>
 </body>
 </html>
