@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+
+  <defs>
+    <linearGradient id="bgmonkey" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#eef3fc"/>
+      <stop offset="100%" stop-color="#f7f9ff"/>
+    </linearGradient>
+    <linearGradient id="circlemonkey" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#4a7cc7"/>
+      <stop offset="100%" stop-color="#1a3a6b"/>
+    </linearGradient>
+    <linearGradient id="animalmonkey" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8ddf7"/>
+    </linearGradient>
+    <filter id="shadowmonkey">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1a3a6b" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgmonkey)" rx="16"/>
+
+  <!-- Decorative molecules -->
+  
+    <g opacity="0.25">
+      <circle cx="30" cy="30" r="10" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <circle cx="56" cy="20" r="7" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <circle cx="20" cy="56" r="7" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <line x1="38" y1="24" x2="51" y2="24" stroke="#4a7cc7" stroke-width="1.5"/>
+      <line x1="24" y1="38" x2="24" y2="51" stroke="#4a7cc7" stroke-width="1.5"/>
+    </g>
+    <g opacity="0.2" transform="translate(370,270) rotate(180)">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <circle cx="26" cy="-10" r="7" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <circle cx="-10" cy="26" r="7" fill="none" stroke="#4a7cc7" stroke-width="1.5"/>
+      <line x1="8" y1="-6" x2="21" y2="-6" stroke="#4a7cc7" stroke-width="1.5"/>
+      <line x1="-6" y1="8" x2="-6" y2="21" stroke="#4a7cc7" stroke-width="1.5"/>
+    </g>
+
+  <!-- ELISA well plate strip -->
+  <rect x="16" y="258" width="368" height="32" rx="8" fill="#ffffff" opacity="0.7" stroke="#c8ddf7" stroke-width="1"/>
+  <text x="20" y="268" font-size="8" fill="#6b7280" opacity="0.7" font-family="monospace">96-well plate</text>
+  <circle cx="28" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="58" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="88" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="118" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="148" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="178" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="208" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="238" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="268" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="298" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="328" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="358" cy="268" r="4.5" fill="#c8ddf7" opacity="0.9" stroke="#7faee8" stroke-width="0.5"/><circle cx="28" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="58" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="88" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="118" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="148" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="178" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="208" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="238" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="268" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="298" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="328" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/><circle cx="358" cy="282" r="4.5" fill="#c8ddf7" opacity="0.7" stroke="#7faee8" stroke-width="0.5"/>
+
+  <!-- Main illustration circle -->
+  <circle cx="200" cy="140" r="90" fill="url(#circlemonkey)" filter="url(#shadowmonkey)" opacity="0.12"/>
+  <circle cx="200" cy="140" r="80" fill="#ffffff" filter="url(#shadowmonkey)"/>
+  <circle cx="200" cy="140" r="80" fill="none" stroke="#c8ddf7" stroke-width="2"/>
+
+  <!-- Animal SVG -->
+  
+    <!-- Gövde -->
+    <ellipse cx="200" cy="158" rx="32" ry="26" fill="#1a3a6b" opacity="0.85"/>
+    <!-- Büyük kulaklar -->
+    <circle cx="165" cy="115" r="16" fill="#4a7cc7" opacity="0.9"/>
+    <circle cx="165" cy="115" r="10" fill="#c8ddf7" opacity="0.6"/>
+    <circle cx="235" cy="115" r="16" fill="#4a7cc7" opacity="0.9"/>
+    <circle cx="235" cy="115" r="10" fill="#c8ddf7" opacity="0.6"/>
+    <!-- Baş -->
+    <circle cx="200" cy="118" r="28" fill="#1a3a6b" opacity="0.9"/>
+    <!-- Yüz (açık oval) -->
+    <ellipse cx="200" cy="125" rx="20" ry="17" fill="#4a7cc7" opacity="0.55"/>
+    <!-- Gözler -->
+    <circle cx="190" cy="114" r="5" fill="#ffffff"/>
+    <circle cx="191" cy="114" r="2.8" fill="#1a3a6b"/>
+    <circle cx="191.5" cy="113" r="1" fill="#ffffff"/>
+    <circle cx="210" cy="114" r="5" fill="#ffffff"/>
+    <circle cx="211" cy="114" r="2.8" fill="#1a3a6b"/>
+    <circle cx="211.5" cy="113" r="1" fill="#ffffff"/>
+    <!-- Burun -->
+    <circle cx="197" cy="123" r="3" fill="#1a3a6b" opacity="0.4"/>
+    <circle cx="203" cy="123" r="3" fill="#1a3a6b" opacity="0.4"/>
+    <!-- Gülümseme -->
+    <path d="M188 131 Q200 140 212 131" fill="none" stroke="#1a3a6b" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <!-- Kollar -->
+    <path d="M170 150 Q150 148 145 165 Q143 175 152 180" fill="none" stroke="#1a3a6b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M230 150 Q250 148 255 165 Q257 175 248 180" fill="none" stroke="#1a3a6b" stroke-width="10" stroke-linecap="round"/>
+    <!-- Bacaklar -->
+    <rect x="182" y="180" width="15" height="24" rx="7" fill="#4a7cc7" opacity="0.85"/>
+    <rect x="203" y="180" width="15" height="24" rx="7" fill="#4a7cc7" opacity="0.85"/>
+    <!-- Kuyruk -->
+    <path d="M232 162 Q255 155 258 170 Q260 185 245 188 Q232 190 230 202" fill="none" stroke="#4a7cc7" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Label area -->
+  <text x="200" y="232" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#1a3a6b">Maymun ELISA Kiti</text>
+  <text x="200" y="248" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#2d5aa0">Primate</text>
+</svg>
