@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkımızda | Makrosel Group</title>
+<meta name="description" content="Makrosel Group hakkında — kurumsal yapı, tarihçe, politikalar, belgeler, sürdürülebilirlik ve kariyer fırsatları.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1a3a6b',
+          'navy-dark': '#0a1628',
+          'navy-light': '#1e4d8c',
+          crimson: '#e63946',
+          'crimson-dark': '#c1121f',
+        },
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .mega-trigger:hover .mega-menu, .mega-menu:hover { display: grid; }
+  .elisa-trigger:hover .elisa-sub, .elisa-sub:hover { display: block; }
+  .nav-link::after { content:''; display:block; height:2px; background:#e63946; transform:scaleX(0); transition:transform .2s ease; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  #mobile-menu { display:none; }
+  #mobile-menu.open { display:block; }
+
+  /* Accordion */
+  .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1); }
+  .acc-body.open { max-height: 1200px; }
+  .acc-chevron { transition: transform 0.3s ease; }
+  .acc-item.open .acc-chevron { transform: rotate(180deg); }
+  .acc-item.open .acc-header { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .acc-item.open .acc-header-inner { background: #1a3a6b; color: white; }
+  .acc-item.open .acc-header-inner .acc-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
+  .acc-item.open .acc-header-inner .acc-title { color: white; }
+  .acc-item.open .acc-header-inner .acc-subtitle { color: rgba(255,255,255,0.65); }
+  .acc-item.open .acc-header-inner .acc-chevron { color: white; }
+
+  /* Timeline */
+  .tl-dot { position:relative; }
+  .tl-dot::before { content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#e63946; z-index:1; }
+
+  /* Hero gradient */
+  .hero-gradient { background: linear-gradient(135deg, #0a1628 0%, #1a3a6b 50%, #0a1628 100%); }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#111111] border-b border-white/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-8 h-8 bg-crimson rounded flex items-center justify-center">
+          <span class="text-white font-black text-sm">M</span>
+        </div>
+        <span class="text-white font-bold text-xl tracking-tight">Makrosel <span class="text-gray-400 font-light">Group</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-1">
+        <div class="mega-trigger relative">
+          <button class="nav-link flex items-center gap-1 text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">
+            Ürünler <span class="material-symbols-outlined text-[16px] leading-none">expand_more</span>
+          </button>
+          <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[780px] bg-[#1a1a1a] border border-white/10 rounded-b-2xl shadow-2xl p-8 grid-cols-3 gap-8 z-50">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Kitler</p>
+              <ul class="space-y-0.5">
+                <li class="elisa-trigger relative">
+                  <a href="elisa-kitleri.html" class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group">
+                    <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>ELİSA Kitleri</span>
+                    <span class="material-symbols-outlined text-[14px] text-gray-600 group-hover:text-crimson">chevron_right</span>
+                  </a>
+                  <div class="elisa-sub hidden absolute left-full top-0 w-52 bg-[#222] border border-white/10 rounded-xl shadow-2xl p-4 z-50">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-crimson mb-3">Türe Göre</p>
+                    <ul class="space-y-0.5">
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">İnsan Elisa Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Fare - Mouse</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Sıçan - Rat</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Sığır - Bovine</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">At Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded">Koyun / Keçi</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Üre Nefes Testi</a></li>
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Biyokimya Kitleri</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Cihazlar</p>
+              <ul class="space-y-1">
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Cihazları</a></li>
+                <li><a href="veteriner-kan-gazi.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Veteriner Kan Gazı</a></li>
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Üre Nefes Test Cihazı</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Biyokimya Cihazları</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-crimson mb-4">Diğer</p>
+              <ul class="space-y-1 mb-6">
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>İkinci El Cihazlar</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 text-gray-400 hover:text-white text-sm py-1.5 transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-crimson transition-colors"></span>Kan Sayım Solüsyonları</a></li>
+              </ul>
+              <div class="border-t border-white/10 pt-6">
+                <p class="text-white font-semibold text-sm mb-1">Tüm Ürün Kataloğu</p>
+                <p class="text-gray-500 text-xs mb-4">500+ ürün ile tam katalog</p>
+                <a href="urunler.html" class="inline-flex items-center gap-2 bg-crimson text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-crimson-dark transition-colors">
+                  Kataloğu İncele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="hakkimizda.html" class="nav-link text-white text-sm font-semibold px-4 py-2 rounded transition-colors border-b-2 border-crimson">Hakkımızda</a>
+        <a href="index.html#markalar" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Markalar</a>
+        <a href="urunler.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Blog</a>
+        <a href="index.html#iletisim" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">İletişim</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+902166062939" class="text-gray-400 hover:text-white text-sm font-medium px-3 py-2 transition-colors hidden xl:flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">call</span>0216 606 29 39
+        </a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="bg-crimson hover:bg-crimson-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">Teklif Al</a>
+      </div>
+      <button id="hamburger" class="lg:hidden text-gray-300 hover:text-white p-2" aria-label="Menü">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-[#1a1a1a] border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 space-y-3">
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1">ELİSA Kitleri</a>
+      <a href="pe-7100-lazer-kan-sayim.html" class="block text-gray-400 hover:text-white py-1">Kan Sayım Cihazları</a>
+      <a href="urunler.html" class="block text-gray-400 hover:text-white py-1">Tüm Ürünler</a>
+      <div class="border-t border-white/10 pt-3 space-y-2">
+        <a href="hakkimizda.html" class="block text-white font-semibold py-1">Hakkımızda</a>
+        <a href="index.html#iletisim" class="block text-gray-300 hover:text-white py-1">İletişim</a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="inline-block bg-crimson text-white font-semibold px-5 py-2.5 rounded-lg mt-2">Teklif Al</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-gradient relative overflow-hidden pt-32 pb-20">
+  <div class="absolute inset-0 opacity-10" style="background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:60px 60px"></div>
+  <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-crimson/15 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-1/3 w-96 h-48 bg-navy/40 rounded-full blur-3xl"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-gray-500 mb-8">
+      <a href="index.html" class="hover:text-gray-300 transition-colors">Ana Sayfa</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-gray-300 font-medium">Hakkımızda</span>
+    </nav>
+    <div class="max-w-3xl">
+      <span class="inline-block bg-crimson/20 text-crimson text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">Kurumsal</span>
+      <h1 class="text-4xl lg:text-5xl font-black text-white mb-5 leading-tight">Makrosel Group<br><span class="text-blue-300">Hakkımızda</span></h1>
+      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+        2006'dan bu yana İstanbul Çekmeköy'den Türkiye'ye tıbbi tanı ve laboratuvar çözümleri sunuyoruz. 20 yılı aşkın deneyim, 500+ ürün, 1000+ güvenilir müşteri.
+      </p>
+    </div>
+    <!-- Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-black text-white">20+</div>
+        <div class="text-xs text-gray-400 mt-1">Yıl Deneyim</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-black text-white">500+</div>
+        <div class="text-xs text-gray-400 mt-1">Ürün Çeşidi</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-black text-white">1000+</div>
+        <div class="text-xs text-gray-400 mt-1">Müşteri</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
+        <div class="text-3xl font-black text-white">7/24</div>
+        <div class="text-xs text-gray-400 mt-1">Teknik Destek</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BİZ KİMİZ (static, not accordion) -->
+<section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block bg-navy/10 text-navy text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">Biz Kimiz</span>
+      <h2 class="text-3xl font-black text-gray-900 mb-5">Tıbbi Diagnostiğin<br>Güvenilir Adresi</h2>
+      <p class="text-gray-600 leading-relaxed mb-5">
+        Makrosel Group, 2006 yılında İstanbul Çekmeköy'de kurulmuş, tıbbi tanı ve laboratuvar ürünleri alanında faaliyet gösteren köklü bir Türk firmasıdır. SinoGeneclon, Bostonchem, Krishgen ve Biolabo gibi dünya genelinde tanınan markalar için Türkiye distribütörü olarak hizmet vermektedir.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-8">
+        ELISA kitleri, kan sayım cihazları, veteriner diagnostik ürünleri ve biyokimya kitlerinden oluşan geniş portföyüyle hastane, üniversite, araştırma kurumu ve veteriner kliniklerine çözüm sunmaktadır.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="inline-flex items-center gap-2 bg-green-50 text-green-700 text-sm font-medium px-4 py-2 rounded-full border border-green-200">
+          <span class="material-symbols-outlined text-[16px]">verified</span>ISO Sertifikalı
+        </span>
+        <span class="inline-flex items-center gap-2 bg-blue-50 text-navy text-sm font-medium px-4 py-2 rounded-full border border-blue-200">
+          <span class="material-symbols-outlined text-[16px]">local_shipping</span>Hızlı Teslimat
+        </span>
+        <span class="inline-flex items-center gap-2 bg-red-50 text-crimson text-sm font-medium px-4 py-2 rounded-full border border-red-200">
+          <span class="material-symbols-outlined text-[16px]">support_agent</span>7/24 Destek
+        </span>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="rounded-2xl overflow-hidden shadow-2xl">
+        <img src="assets/images/hakkimizda/biz-kimiz.png" alt="Makrosel Group Ekibi" class="w-full h-72 object-cover">
+      </div>
+      <div class="absolute -bottom-5 -left-5 bg-navy text-white rounded-2xl p-5 shadow-xl">
+        <div class="text-2xl font-black">2006</div>
+        <div class="text-xs text-blue-200 mt-0.5">Yılından Beri</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCORDION BÖLÜMLER -->
+<section class="max-w-4xl mx-auto px-6 lg:px-8 pb-20 space-y-3">
+
+  <!-- 1. Yönetim Kurulu -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">groups</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Yönetim Kurulu</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Liderlik kadrosu ve yönetim yapısı</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/yonetim-kurulu.png" alt="Yönetim Kurulu" class="w-full h-52 object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+          <p class="text-gray-600 leading-relaxed mb-5">
+            Makrosel Group, alanında uzman profesyonellerden oluşan yönetim kadrosuyla sektörde öncü konumunu sürdürmektedir. Deneyimli ekibimiz, tıbbi diagnostik alanındaki 20 yılı aşkın tecrübesiyle müşterilerimize en iyi hizmeti sunmaktadır.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+              <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-white text-[18px]">person</span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-gray-900">Genel Müdür</div>
+                <div class="text-xs text-gray-500">20+ yıl sektör deneyimi</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+              <div class="w-9 h-9 bg-crimson rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-white text-[18px]">science</span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-gray-900">Teknik Direktör</div>
+                <div class="text-xs text-gray-500">Tıbbi cihaz ve kit uzmanı</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+              <div class="w-9 h-9 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-white text-[18px]">trending_up</span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-gray-900">Satış & Pazarlama Direktörü</div>
+                <div class="text-xs text-gray-500">Ulusal dağıtım ağı yönetimi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Geçmişten Günümüze -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">timeline</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Geçmişten Günümüze</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">2006'dan bugüne büyüme yolculuğumuz</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="px-6 pb-6 pt-2">
+        <div class="mb-5 rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/gecmisten-gunumuze.png" alt="Tarihçe" class="w-full h-48 object-cover">
+        </div>
+        <div class="relative">
+          <!-- Dikey çizgi -->
+          <div class="absolute left-[19px] top-3 bottom-3 w-0.5 bg-gray-100"></div>
+          <div class="space-y-4">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">06</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2006</span>
+                <p class="text-sm text-gray-700 mt-0.5">İstanbul Çekmeköy'de kuruldu</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/80 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">08</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2008</span>
+                <p class="text-sm text-gray-700 mt-0.5">İlk ELISA kit distribütörlük anlaşması</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/70 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">10</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2010</span>
+                <p class="text-sm text-gray-700 mt-0.5">Veteriner diagnostik ürünleri portföye eklendi</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/60 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">12</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2012</span>
+                <p class="text-sm text-gray-700 mt-0.5">Kan sayım cihazları satış ve servis başladı</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/55 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">15</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2015</span>
+                <p class="text-sm text-gray-700 mt-0.5">200+ ürün yelpazesine ulaşıldı</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/50 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">18</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2018</span>
+                <p class="text-sm text-gray-700 mt-0.5">SinoGeneclon Biotech Türkiye distribütörlüğü alındı</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/45 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">20</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2020</span>
+                <p class="text-sm text-gray-700 mt-0.5">Online satış platformu kuruldu</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-navy/40 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">23</span>
+              </div>
+              <div class="flex-1 pt-1.5 pb-3 border-b border-gray-50">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2023</span>
+                <p class="text-sm text-gray-700 mt-0.5">500+ ürün, 1000+ aktif müşteri</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-full bg-crimson flex items-center justify-center flex-shrink-0 relative z-10">
+                <span class="text-white text-xs font-bold">24</span>
+              </div>
+              <div class="flex-1 pt-1.5">
+                <span class="text-xs font-bold text-crimson uppercase tracking-wide">2024</span>
+                <p class="text-sm text-gray-700 mt-0.5">Yeni nesil biyokimya cihazları portföye eklendi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Politikalarımız -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">policy</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Politikalarımız</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Kalite, müşteri memnuniyeti ve etik ilkelerimiz</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/politikalarimiz.png" alt="Politikalarımız" class="w-full h-52 object-cover">
+        </div>
+        <div class="space-y-3">
+          <div class="flex gap-3 p-4 bg-blue-50 rounded-xl border border-blue-100">
+            <span class="material-symbols-outlined text-navy text-[22px] flex-shrink-0 mt-0.5">verified_user</span>
+            <div>
+              <div class="text-sm font-bold text-navy mb-1">Kalite Politikası</div>
+              <p class="text-xs text-gray-600 leading-relaxed">ISO standartlarına uygun ürün tedariki ve hizmet süreçleri.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
+            <span class="material-symbols-outlined text-green-700 text-[22px] flex-shrink-0 mt-0.5">support_agent</span>
+            <div>
+              <div class="text-sm font-bold text-green-700 mb-1">Müşteri Memnuniyeti</div>
+              <p class="text-xs text-gray-600 leading-relaxed">7/24 teknik destek ve hızlı teslimat garantisi.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 p-4 bg-purple-50 rounded-xl border border-purple-100">
+            <span class="material-symbols-outlined text-purple-700 text-[22px] flex-shrink-0 mt-0.5">handshake</span>
+            <div>
+              <div class="text-sm font-bold text-purple-700 mb-1">Etik Ticaret</div>
+              <p class="text-xs text-gray-600 leading-relaxed">Şeffaf fiyatlandırma ve dürüst iş ilişkileri.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+            <span class="material-symbols-outlined text-emerald-700 text-[22px] flex-shrink-0 mt-0.5">eco</span>
+            <div>
+              <div class="text-sm font-bold text-emerald-700 mb-1">Çevre</div>
+              <p class="text-xs text-gray-600 leading-relaxed">Sürdürülebilir ve çevre dostu iş süreçleri.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Etik ve Ahlaki Değerlerimiz -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">balance</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Etik ve Ahlaki Değerlerimiz</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Dürüstlük, şeffaflık ve güven</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/etik-degerler.png" alt="Etik Değerlerimiz" class="w-full h-52 object-cover">
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <p class="text-gray-600 leading-relaxed">
+            Dürüstlük, şeffaflık ve güven temel değerlerimizdir. Müşterilerimize, tedarikçilerimize ve çalışanlarımıza karşı her zaman etik davranış ilkelerini benimseriz.
+          </p>
+          <div class="grid grid-cols-3 gap-3 text-center">
+            <div class="p-3 bg-navy/5 rounded-xl">
+              <span class="material-symbols-outlined text-navy text-[28px] block mb-1">visibility</span>
+              <div class="text-xs font-bold text-gray-700">Şeffaflık</div>
+            </div>
+            <div class="p-3 bg-crimson/5 rounded-xl">
+              <span class="material-symbols-outlined text-crimson text-[28px] block mb-1">thumb_up</span>
+              <div class="text-xs font-bold text-gray-700">Dürüstlük</div>
+            </div>
+            <div class="p-3 bg-green-50 rounded-xl">
+              <span class="material-symbols-outlined text-green-600 text-[28px] block mb-1">lock</span>
+              <div class="text-xs font-bold text-gray-700">Güven</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Belgelerimiz -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">workspace_premium</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Belgelerimiz</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Sertifikalar, ruhsatlar ve akreditasyonlar</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/belgelerimiz.png" alt="Belgelerimiz" class="w-full h-52 object-cover">
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 p-3.5 border border-gray-100 rounded-xl hover:border-navy/20 hover:bg-navy/2 transition-all">
+            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-navy text-[20px]">verified</span>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">ISO 13485</div>
+              <div class="text-xs text-gray-500">Tıbbi Cihaz Kalite Yönetim Sistemi</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 border border-gray-100 rounded-xl hover:border-navy/20 transition-all">
+            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-navy text-[20px]">approval</span>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">CE Sertifikaları</div>
+              <div class="text-xs text-gray-500">Avrupa uygunluk belgeleri</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 border border-gray-100 rounded-xl hover:border-navy/20 transition-all">
+            <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-crimson text-[20px]">local_hospital</span>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">T.C. Sağlık Bakanlığı Ruhsatları</div>
+              <div class="text-xs text-gray-500">Türkiye tıbbi cihaz izinleri</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 border border-gray-100 rounded-xl hover:border-navy/20 transition-all">
+            <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-green-600 text-[20px]">handshake</span>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Distribütörlük Sertifikaları</div>
+              <div class="text-xs text-gray-500">SinoGeneclon · Bostonchem · Krishgen · Biolabo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Sürdürülebilirlik -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">eco</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Sürdürülebilirlik</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Çevreye duyarlı iş süreçlerimiz</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/surdurulebilirlik.png" alt="Sürdürülebilirlik" class="w-full h-52 object-cover">
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <p class="text-gray-600 leading-relaxed">
+            Çevreye duyarlı ambalaj kullanımı, enerji tasarrufu ve atık yönetimi konularında aktif çalışmalar yürütmekteyiz.
+          </p>
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></span>
+              <span class="text-sm text-gray-700">Çevre dostu ambalaj kullanımı</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></span>
+              <span class="text-sm text-gray-700">Enerji tasarrufu programları</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></span>
+              <span class="text-sm text-gray-700">Atık yönetimi ve geri dönüşüm</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></span>
+              <span class="text-sm text-gray-700">Dijital belge süreçleri (kağıtsız ofis)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Sosyal Sorumluluk -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">volunteer_activism</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Sosyal Sorumluluk</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Topluma katkı ve eğitim destekleri</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/sosyal-sorumluluk.png" alt="Sosyal Sorumluluk" class="w-full h-52 object-cover">
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <p class="text-gray-600 leading-relaxed">
+            Türk sağlık sektörünün gelişimine katkı sağlamak amacıyla üniversiteler ve araştırma kurumlarıyla işbirliği yapıyoruz. Burs programları ve eğitim destekleriyle gençlere yatırım yapıyoruz.
+          </p>
+          <div class="space-y-3">
+            <div class="flex gap-3 p-3 bg-purple-50 rounded-xl">
+              <span class="material-symbols-outlined text-purple-600 text-[20px]">school</span>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Üniversite İşbirlikleri</div>
+                <div class="text-xs text-gray-500 mt-0.5">Araştırma projeleri ve laboratuvar desteği</div>
+              </div>
+            </div>
+            <div class="flex gap-3 p-3 bg-blue-50 rounded-xl">
+              <span class="material-symbols-outlined text-navy text-[20px]">military_tech</span>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Burs Programları</div>
+                <div class="text-xs text-gray-500 mt-0.5">Tıbbi laboratuvar teknisyeni eğitim bursları</div>
+              </div>
+            </div>
+            <div class="flex gap-3 p-3 bg-green-50 rounded-xl">
+              <span class="material-symbols-outlined text-green-600 text-[20px]">health_and_safety</span>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Sektör Geliştirme</div>
+                <div class="text-xs text-gray-500 mt-0.5">Eğitim seminerleri ve teknik workshoplar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Kariyer -->
+  <div class="acc-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-acc>
+    <button class="acc-header w-full text-left" onclick="toggleAcc(this.parentElement)">
+      <div class="acc-header-inner flex items-center gap-4 px-6 py-5 rounded-2xl transition-all duration-300">
+        <div class="acc-icon-wrap w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+          <span class="material-symbols-outlined text-navy text-[22px]">work</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="acc-title text-base font-bold text-gray-900 transition-colors">Kariyer</div>
+          <div class="acc-subtitle text-xs text-gray-400 mt-0.5 transition-colors">Ekibimize katılın</div>
+        </div>
+        <span class="acc-chevron material-symbols-outlined text-gray-400 text-[24px] flex-shrink-0">expand_more</span>
+      </div>
+    </button>
+    <div class="acc-body">
+      <div class="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-2">
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/images/hakkimizda/kariyer.png" alt="Kariyer" class="w-full h-52 object-cover">
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Dinamik ve büyüyen ekibimize katılmak ister misiniz? Açık pozisyonlar için CV'nizi iletebilirsiniz.
+            </p>
+            <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+              <span class="material-symbols-outlined text-[16px]">location_on</span>
+              <span>İstanbul Çekmeköy — Merkez Ofis</span>
+            </div>
+          </div>
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between p-3.5 border border-gray-100 rounded-xl hover:border-navy/30 hover:bg-navy/2 transition-all group">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-navy text-[18px]">trending_up</span>
+                <span class="text-sm font-medium text-gray-800">Satış Temsilcisi</span>
+              </div>
+              <span class="text-xs text-gray-400 group-hover:text-navy transition-colors">Tam zamanlı</span>
+            </div>
+            <div class="flex items-center justify-between p-3.5 border border-gray-100 rounded-xl hover:border-navy/30 hover:bg-navy/2 transition-all group">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-navy text-[18px]">build</span>
+                <span class="text-sm font-medium text-gray-800">Teknik Servis Uzmanı</span>
+              </div>
+              <span class="text-xs text-gray-400 group-hover:text-navy transition-colors">Tam zamanlı</span>
+            </div>
+            <div class="flex items-center justify-between p-3.5 border border-gray-100 rounded-xl hover:border-navy/30 hover:bg-navy/2 transition-all group">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-navy text-[18px]">local_shipping</span>
+                <span class="text-sm font-medium text-gray-800">Lojistik Uzmanı</span>
+              </div>
+              <span class="text-xs text-gray-400 group-hover:text-navy transition-colors">Tam zamanlı</span>
+            </div>
+          </div>
+          <a href="mailto:info@makroselgroup.com?subject=Kariyer - CV Başvurusu"
+             class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy-dark text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm">
+            <span class="material-symbols-outlined text-[18px]">mail</span>CV Gönder
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA Banner -->
+<section class="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+  <div class="bg-[#0a1628] rounded-3xl p-8 lg:p-12 relative overflow-hidden text-center">
+    <div class="absolute top-0 right-0 w-80 h-80 bg-crimson/10 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-navy/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+    <div class="relative z-10">
+      <h2 class="text-2xl lg:text-3xl font-black text-white mb-3">Birlikte Çalışalım</h2>
+      <p class="text-gray-400 mb-8 max-w-xl mx-auto">Tıbbi tanı ihtiyaçlarınız için uzman ekibimizle iletişime geçin. Hızlı yanıt, şeffaf fiyat, güvenilir servis.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+902166062939" class="inline-flex items-center justify-center gap-2 bg-crimson hover:bg-crimson-dark text-white font-semibold px-7 py-3.5 rounded-xl transition-all">
+          <span class="material-symbols-outlined text-[20px]">call</span>0216 606 29 39
+        </a>
+        <a href="mailto:info@makroselgroup.com?subject=Bilgi Talebi" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl transition-all">
+          <span class="material-symbols-outlined text-[20px]">mail</span>E-posta Gönder
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0d0d0d] border-t border-white/10" id="iletisim">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 bg-crimson rounded flex items-center justify-center">
+            <span class="text-white font-black text-sm">M</span>
+          </div>
+          <span class="text-white font-bold text-xl">Makrosel <span class="text-gray-500 font-light">Group</span></span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Tıbbi tanı ve laboratuvar çözümlerinde 20 yılı aşkın deneyim. Türkiye'nin güvenilir tıbbi tanı tedarikçisi.</p>
+        <div class="flex gap-3">
+          <a href="mailto:info@makroselgroup.com" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+          </a>
+          <a href="tel:+908503045606" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-[18px]">call</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Ürünler</h4>
+        <ul class="space-y-3">
+          <li><a href="elisa-kitleri.html" class="text-gray-500 hover:text-white text-sm transition-colors">ELİSA Kitleri</a></li>
+          <li><a href="pe-7100-lazer-kan-sayim.html" class="text-gray-500 hover:text-white text-sm transition-colors">Kan Sayım Cihazları</a></li>
+          <li><a href="veteriner-kan-gazi.html" class="text-gray-500 hover:text-white text-sm transition-colors">Veteriner Ürünleri</a></li>
+          <li><a href="ure-nefes-testi-c13.html" class="text-gray-500 hover:text-white text-sm transition-colors">Üre Nefes Testi</a></li>
+          <li><a href="urunler.html" class="text-gray-500 hover:text-white text-sm transition-colors">Biyokimya Kitleri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Markalar</h4>
+        <ul class="space-y-3">
+          <li><a href="markalar/sinogeneclon.html" class="text-gray-500 hover:text-white text-sm transition-colors">SinoGeneclon</a></li>
+          <li><a href="markalar/krishgen.html" class="text-gray-500 hover:text-white text-sm transition-colors">Krishgen</a></li>
+          <li><a href="markalar/diatek.html" class="text-gray-500 hover:text-white text-sm transition-colors">DIATEK</a></li>
+          <li><a href="markalar/getein.html" class="text-gray-500 hover:text-white text-sm transition-colors">Getein</a></li>
+          <li><a href="markalar/bostonchem.html" class="text-gray-500 hover:text-white text-sm transition-colors">Bostonchem</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">İletişim</h4>
+        <ul class="space-y-4">
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] mt-0.5 flex-shrink-0">location_on</span>
+            <span class="text-gray-500 text-sm leading-relaxed">Mimar Sinan Mah. Çağlayan Sok. 9/5<br>34782 Çekmeköy / İstanbul</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">call</span>
+            <div class="flex flex-col gap-0.5">
+              <a href="tel:+902166062939" class="text-gray-400 hover:text-white text-sm transition-colors font-medium">0(216) 606 29 39</a>
+              <a href="tel:+908503045606" class="text-gray-500 hover:text-white text-sm transition-colors">0(850) 304 56 06</a>
+              <a href="tel:+905074299021" class="text-gray-500 hover:text-white text-xs transition-colors">+90 507 429 90 21 <span class="text-crimson">(Acil)</span></a>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">mail</span>
+            <a href="mailto:info@makroselgroup.com" class="text-gray-500 hover:text-white text-sm transition-colors">info@makroselgroup.com</a>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">schedule</span>
+            <span class="text-gray-500 text-sm">Hft içi 09:00–18:00<br>Cumartesi 09:00–13:00<br><span class="text-crimson font-medium">Teknik Servis 7/24</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+      <p>© 2024 Makrosel Group. Tüm hakları saklıdır.</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@makroselgroup.com" class="hover:text-gray-400 transition-colors">Gizlilik Politikası</a>
+        <a href="mailto:info@makroselgroup.com" class="hover:text-gray-400 transition-colors">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    if (window.scrollY > 40) {
+      nav.classList.add('shadow-xl', 'shadow-black/40');
+    } else {
+      nav.classList.remove('shadow-xl', 'shadow-black/40');
+    }
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.mega-trigger')) {
+      document.querySelectorAll('.mega-menu').forEach(function(m) { m.style.display = ''; });
+    }
+  });
+
+  // Accordion
+  function toggleAcc(item) {
+    var body = item.querySelector('.acc-body');
+    var isOpen = item.classList.contains('open');
+    // Tüm diğerleri kapat
+    document.querySelectorAll('.acc-item.open').forEach(function(other) {
+      if (other !== item) {
+        other.classList.remove('open');
+        other.querySelector('.acc-body').classList.remove('open');
+      }
+    });
+    // Bu item toggle
+    if (isOpen) {
+      item.classList.remove('open');
+      body.classList.remove('open');
+    } else {
+      item.classList.add('open');
+      body.classList.add('open');
+      setTimeout(function() {
+        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  }
+</script>
+</body>
+</html>
