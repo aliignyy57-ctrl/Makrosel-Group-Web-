@@ -1,0 +1,17 @@
+# Claude Code settings (API keys içerebilir)
+.claude/
+
+# Build/crawl scriptleri
+crawl_bostonchem.py
+extract_bostonchem.py
+generate_bostonchem.py
+update_bostonchem.py
+generate_images.py
+bostonchem_products.json
+
+# Cloudflare binary
+cloudflared
+cloudflared.tgz
+
+# OS
+.DS_Store

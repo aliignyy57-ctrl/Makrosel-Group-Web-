@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tam Otomatik Veteriner Kan Gazı ve Elektrolit Analiz Cihazı | MedTech Diagnostics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#2e1500",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d4dbe5",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#db3232",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#dce3ed",
+                    "outline-variant": "#c1c7d3",
+                    "primary-fixed-dim": "#a0c9ff",
+                    "medical-success": "#10B981",
+                    "tertiary-fixed": "#ffdcc2",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2a3139",
+                    "outline": "#717782",
+                    "on-primary-fixed": "#001c37",
+                    "surface": "#f7f9ff",
+                    "tertiary-container": "#a95d00",
+                    "background": "#f7f9ff",
+                    "surface-bright": "#f7f9ff",
+                    "border-subtle": "#E2E8F0",
+                    "tertiary-fixed-dim": "#ffb77b",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "inverse-primary": "#a0c9ff",
+                    "on-surface-variant": "#414751",
+                    "on-secondary-fixed-variant": "#930010",
+                    "surface-variant": "#dce3ed",
+                    "on-tertiary-container": "#fff3ed",
+                    "on-primary-fixed-variant": "#00497f",
+                    "inverse-on-surface": "#ebf1fc",
+                    "surface-container": "#e8eef9",
+                    "surface-gray": "#F8FAFC",
+                    "on-secondary-fixed": "#410003",
+                    "primary-container": "#1e73be",
+                    "secondary": "#b7131d",
+                    "on-tertiary-fixed-variant": "#6d3a00",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#edf4ff",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#151c23",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#0061a6",
+                    "on-primary-container": "#f2f5ff",
+                    "on-surface": "#151c23",
+                    "tertiary": "#864800",
+                    "primary-fixed": "#d2e4ff",
+                    "primary": "#005a9c",
+                    "surface-container-high": "#e2e9f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "unit": "4px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+<style>
+  .nav-link::after { content:''; display:block; height:2px; background:#e63946; transform:scaleX(0); transition:transform .2s ease; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .mega-trigger:hover .mega-menu,
+  .mega-menu:hover { display: grid; }
+  .elisa-trigger:hover .elisa-sub,
+  .elisa-sub:hover { display: block; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#111111] border-b border-white/10 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-18 py-4">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-8 h-8 bg-[#e63946] rounded flex items-center justify-center">
+          <span class="text-white font-black text-sm">M</span>
+        </div>
+        <span class="text-white font-bold text-xl tracking-tight">Makrosel <span class="text-gray-400 font-light">Group</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+                <!-- ÜRÜNLER mega trigger -->
+        <div class="mega-trigger relative">
+          <button class="nav-link flex items-center gap-1 text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">
+            Ürünler
+            <span class="material-symbols-outlined text-[16px] leading-none">expand_more</span>
+          </button>
+
+          <!-- Mega Menu -->
+          <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[780px] bg-[#1a1a1a] border border-white/10 rounded-b-2xl shadow-2xl p-8 grid-cols-3 gap-8 z-50">
+
+            <!-- Kolon 1: Kitler -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-4">Kitler</p>
+              <ul class="space-y-0.5">
+
+                <!-- ELİSA Kitleri — flyout sub-menu -->
+                <li class="elisa-trigger relative">
+                  <a href="elisa-kitleri.html" class="flex items-center justify-between px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group">
+                    <span class="flex items-center gap-2">
+                      <span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>
+                      ELİSA Kitleri
+                    </span>
+                    <span class="material-symbols-outlined text-[14px] text-gray-600 group-hover:text-[#e63946]">chevron_right</span>
+                  </a>
+                  <!-- ELİSA Sub-menu flyout -->
+                  <div class="elisa-sub hidden absolute left-full top-0 w-52 bg-[#222] border border-white/10 rounded-xl shadow-2xl p-4 z-50">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-[#e63946] mb-3">Türe Göre</p>
+                    <ul class="space-y-0.5">
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">İnsan Elisa Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Fare - Mouse</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Sıçan - Rat</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Sığır - Bovine</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Deve - Camel</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">At Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Eşek - Donkey</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Koyun - Sheep / Lamb</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Goat - Keçi</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Kedi - Cat</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Köpek Kitleri</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Domuz - Pig</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Maymun - Monkey</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Balık - Fish</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Tavuk</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Tavşan</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Ördek</a></li>
+                      <li><a href="elisa-kitleri.html" class="block px-2 py-1 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors">Kaz - Goose</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Üre Nefes Testi</a></li>
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Kan Sayım Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Allerji Testleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Anti-SARS-COV-2</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Anti-Body</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Biolabo Biyokimya Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Makrosel Biyokimya Kitleri</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Veteriner Biyokimya Kitleri</a></li>
+              </ul>
+            </div>
+
+            <!-- Kolon 2: Cihazlar -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-4">Cihazlar</p>
+              <ul class="space-y-0.5">
+                <li><a href="pe-7100-lazer-kan-sayim.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Kan Sayım Cihazları</a></li>
+                <li><a href="veteriner-kan-gazi.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Tam Otomatik Veteriner Kan Gazı</a></li>
+                <li><a href="ure-nefes-testi-c13.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Üre Nefes Test Cihazı</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Sibo Nefes Testi Lactofan2</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Infrared Spectrometer-200</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Infrared Spectrometer-300</a></li>
+                <li><a href="elisa-kitleri.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Elisa Okuyucular</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Biyokimya Cihazları</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Santrifüjler</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>X-Ray Cihazları</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>İdrar Analiz Cihazı</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Mikroskoplar</a></li>
+              </ul>
+            </div>
+
+            <!-- Kolon 3: Diğer + CTA -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e63946] mb-4">Diğer</p>
+              <ul class="space-y-0.5 mb-6">
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>İkinci El Kan Sayım Cihazları</a></li>
+                <li><a href="urunler.html" class="flex items-center gap-2 px-2 py-1.5 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors group"><span class="w-1 h-1 rounded-full bg-gray-600 group-hover:bg-[#e63946] transition-colors"></span>Kan Sayım Cihazı Solüsyonları</a></li>
+              </ul>
+              <div class="border-t border-white/10 pt-5">
+                <p class="text-white font-semibold text-sm mb-1">Tüm Ürün Kataloğu</p>
+                <p class="text-gray-500 text-xs mb-4">500+ ürün ile tam katalog</p>
+                <a href="urunler.html" class="inline-flex items-center gap-2 bg-[#e63946] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#c1121f] transition-colors">
+                  Kataloğu İncele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <a href="index.html#hakkimizda" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Hakkımızda</a>
+        <a href="urunler.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Markalar</a>
+        <a href="urunler.html" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">Blog</a>
+        <a href="index.html#iletisim" class="nav-link text-gray-300 hover:text-white text-sm font-medium px-4 py-2 rounded transition-colors">İletişim</a>
+      </div>
+
+      <!-- Right actions -->
+      <div class="hidden lg:flex items-center gap-3">
+        <button class="text-gray-400 hover:text-white p-2 transition-colors" aria-label="Ara">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </button>
+        <a href="tel:+908503045606" class="text-gray-400 hover:text-white text-sm font-medium px-3 py-2 transition-colors hidden xl:flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">call</span>0850 304 56 06
+        </a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="bg-[#e63946] hover:bg-[#c1121f] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
+          Teklif Al
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden text-gray-300 hover:text-white p-2" aria-label="Menü">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden bg-[#1a1a1a] border-t border-white/10" style="display:none">
+    <div class="max-w-7xl mx-auto px-6 py-6 space-y-2">
+      <p class="text-xs font-bold uppercase tracking-widest text-[#e63946]">ELİSA Kitleri</p>
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1 text-sm">İnsan Elisa Kitleri</a>
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1 text-sm">Fare · Sıçan · Sığır · Deve</a>
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1 text-sm">At · Eşek · Koyun · Keçi</a>
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1 text-sm">Kedi · Köpek · Domuz · Maymun</a>
+      <a href="elisa-kitleri.html" class="block text-gray-400 hover:text-white py-1 text-sm">Balık · Tavuk · Tavşan · Ördek · Kaz</a>
+      <p class="text-xs font-bold uppercase tracking-widest text-[#e63946] pt-2">Kitler</p>
+      <a href="ure-nefes-testi-c13.html" class="block text-gray-400 hover:text-white py-1 text-sm">Üre Nefes Testi</a>
+      <a href="urunler.html" class="block text-gray-400 hover:text-white py-1 text-sm">Allerji · Anti-SARS · Anti-Body</a>
+      <a href="urunler.html" class="block text-gray-400 hover:text-white py-1 text-sm">Biyokimya Kitleri</a>
+      <p class="text-xs font-bold uppercase tracking-widest text-[#e63946] pt-2">Cihazlar</p>
+      <a href="pe-7100-lazer-kan-sayim.html" class="block text-gray-400 hover:text-white py-1 text-sm">Kan Sayım Cihazları</a>
+      <a href="veteriner-kan-gazi.html" class="block text-gray-400 hover:text-white py-1 text-sm">Veteriner Kan Gazı</a>
+      <a href="urunler.html" class="block text-gray-400 hover:text-white py-1 text-sm">Tüm Cihazlar</a>
+      <div class="border-t border-white/10 pt-4 space-y-2">
+        <a href="index.html#hakkimizda" class="block text-gray-300 hover:text-white py-1 text-sm">Hakkımızda</a>
+        <a href="index.html#iletisim" class="block text-gray-300 hover:text-white py-1 text-sm">İletişim</a>
+        <a href="mailto:info@makroselgroup.com?subject=Teklif Talebi" class="inline-block bg-[#e63946] text-white font-semibold px-5 py-2.5 rounded-lg mt-2 text-sm">Teklif Al</a>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-8">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex mb-8 items-center gap-2 text-on-surface-variant font-label-md">
+<a class="hover:text-primary transition-colors" href="urunler.html">Ürünler</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Cihazlar</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Kan Gazı Cihazları</span>
+</nav>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+<!-- Product Visual -->
+<div class="lg:col-span-6 space-y-6">
+<div class="relative group aspect-square bg-white rounded-xl border border-subtle overflow-hidden shadow-sm flex items-center justify-center p-12">
+<img class="max-h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105" alt="A high-end, compact and portable veterinary blood gas and electrolyte analyzer device. The device features a sleek medical-grade white plastic housing with a prominent color touchscreen interface. It is positioned on a clean, stainless steel laboratory counter within a bright, modern veterinary clinic setting. Soft, clinical lighting highlights its ergonomic design and high-tech aesthetic, using a professional palette of whites and medical blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwcD9MIDIl35PIAfIxQutJGbC2LpXxdHVl6hCuDDEyBDkNi-g_W5Cwb5BPIb6Rg-SrYR2YKULDIafs5-DK8uKefC6dEeN3XDYsD-wIpUap5SKC0ogEC1Scl3eaUhsPZiISVAWs3cGB2F4UucA_FrMmFCaw5hWbQOcWwjQZGRAESOWLoVVMP7jXYud5srk62C3ItNPCqOOjvTLWIqt0HrhPxPg8-Z4bDgxp-4J2Vqn5ta30r31zVivyhp_AjgfA9zebrtKFGD5UWfcJ"/>
+<div class="absolute top-4 left-4 bg-medical-success text-white px-3 py-1 rounded-full flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Stokta Mevcut
+                    </div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-white border border-primary rounded-lg p-2 cursor-pointer">
+<img class="w-full h-full object-cover rounded-md" alt="Close up detailed shot of the cartridge entry slot on a veterinary blood gas analyzer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NhQ-Rp-eSD5ikwMOXDI3kzZ2v85odoaeUqAgbbOK4IUzU9BOuQqZycActryh5ZN6QkE698y6S3IMMTq-eXrNvaBlVRxZoSd7Su09mi_mHkr2JT2Sio_vXiceBIil4l3JpBdH1VpxjPDab-Vpnk6Hrp1jzGLB1dx6v-DB032j8QRnmyrJdvHcCgWpUqnmMsBcAt8GfgfNuWLzPM6_tnItK-n-HVjza3W9bXKYpSxoiwByv_X3T5S3H8C8hCT-i5SqYerp75dp_IOD"/>
+</div>
+<div class="aspect-square bg-white border border-subtle rounded-lg p-2 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded-md" alt="Side profile view of a portable veterinary blood gas analyzer showing its compact dimensions and handle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Dpm5L8LR7SYw-6ZA5B-Fve0lDzE6BnsECr3aXV0TegbqTM3yqojz891tw47erO0vH-pZvfrGSieInOR1ywm1rLVfs3QSIuBbC2WqD9KcXzMW_mL5J_Tb-NasTDjSN3UyR__VgbfaeuO7_MQ8Srhj13h-AYW-4Zh02NZGGUZdVskrk8GbmYULNo5aUQUDI8L7AjhfDn72qivx6fNSyCbdHxXwzH5v3u-pnKzoWs0OGt14Eh4VfKq6E_AVj9yRJ1z7iz59CYEgQ25f"/>
+</div>
+<div class="aspect-square bg-white border border-subtle rounded-lg p-2 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded-md" alt="A laboratory technician's hand operating the touchscreen interface of a veterinary diagnostic device." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeMeWf0HRMgFxX4EMsTzr4kUFEJNFkXNRDNw9iK3mIER8j1ml12m61t-fYzx-4hubDR9L5Y0kGta0D6ulefTrQPs8xtRIvTaGG7GIQxzmI3oS2gZ8SqNHllO1PSyv4E4Hw9jFVansk7bOMc8D2pQAiAMxJBiUQaDQ4nY6B7SKF1TXilkRSq8RAtPaqIfU8qtqjfpp2FdydDYDPvpF8pgb_JuieiAR3sfIrnEYJx9sauOBSez6RzxfOZHDCDctlkpy97GW2ckGCz7F"/>
+</div>
+<div class="aspect-square bg-white border border-subtle rounded-lg p-2 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded-md" alt="A display of the measurement cartridge used in a veterinary blood gas analyzer device." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLdmxF0v5L1rryf3OXZqt6z34CF7P6YjhW3t0UABwNlTHohy2BcxahnFj7ibcUKWoykUTwvUKMwNp7PbPYMHUOCTTx1Zj3UJwB1rXhknP_b6O8TZnODqsz82A-EsVw5x7AjKmoV9vYfke2WLULFHHAiTgSg16ENc2EjLHu1rYF07BtAneE4m7-x6zsls7VjmLxO-h4M9e8VYSlZ_Mt_a7Dr3Mt_THwEGWqOqgYicTMTLmN_uNCbLaSN-GmVQSLmOOikuMCvb14oK4e"/>
+</div>
+</div>
+</div>
+<!-- Product Info -->
+<div class="lg:col-span-6 flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-4 leading-tight">
+                    Tam Otomatik Veteriner Kan Gazı ve Elektrolit Analiz Cihazı
+                </h1>
+<p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed">
+                    Klinik ortamında hızlı ve güvenilir sonuçlar için tasarlanmış, bakım gerektirmeyen kartuş teknolojisi ile donatılmış taşınabilir analiz çözümü.
+                </p>
+<!-- Key Features Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="glass-card p-4 rounded-xl flex items-start gap-4">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">timer</span>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Hızlı Sonuç</div>
+<div class="text-on-surface-variant text-sm">Sadece 120 saniyede tam rapor</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-start gap-4">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">build_circle</span>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Sıfır Bakım</div>
+<div class="text-on-surface-variant text-sm">Tak-çıkar kartuş sistemi</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-start gap-4">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">travel_explore</span>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Taşınabilir</div>
+<div class="text-on-surface-variant text-sm">Hafif ve bataryalı tasarım</div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-start gap-4">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">share_reviews</span>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Entegre HIS/LIS</div>
+<div class="text-on-surface-variant text-sm">Otomatik veri aktarımı</div>
+</div>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="mt-auto flex flex-col sm:flex-row gap-4 pt-8 border-t border-subtle">
+<button class="flex-1 bg-primary text-white py-4 rounded-lg font-headline-md hover:bg-primary/90 transition-all shadow-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">description</span>
+                        Teklif Al
+                    </button>
+<button class="flex-1 border-2 border-primary text-primary py-4 rounded-lg font-headline-md hover:bg-primary-container/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">call</span>
+                        Hemen Ara
+                    </button>
+</div>
+</div>
+</section>
+<!-- Details Tabs / Content -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 border-t border-subtle">
+<div class="lg:col-span-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Teknik Özellikler ve Parametreler</h3>
+<div class="bg-white border border-subtle rounded-xl overflow-hidden shadow-sm mb-12">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant">
+<th class="px-6 py-4 font-label-md border-b border-subtle">Ölçülen Parametreler</th>
+<th class="px-6 py-4 font-label-md border-b border-subtle">Açıklama</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y divide-subtle">
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="px-6 py-4 font-semibold text-primary">Kan Gazları</td>
+<td class="px-6 py-4">pH, pCO2, pO2</td>
+</tr>
+<tr class="bg-surface-gray/50 hover:bg-surface-gray transition-colors">
+<td class="px-6 py-4 font-semibold text-primary">Elektrolitler</td>
+<td class="px-6 py-4">Na+, K+, Cl-, Ca++</td>
+</tr>
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="px-6 py-4 font-semibold text-primary">Metabolitler</td>
+<td class="px-6 py-4">Glu (Glikoz), Lac (Laktat)</td>
+</tr>
+<tr class="bg-surface-gray/50 hover:bg-surface-gray transition-colors">
+<td class="px-6 py-4 font-semibold text-primary">Hesaplanan Değerler</td>
+<td class="px-6 py-4">Hct (Hematokrit), HCO3-, BE, sO2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="prose prose-blue max-w-none text-on-surface-variant">
+<h4 class="text-on-surface font-headline-md mb-4">Ürün Avantajları</h4>
+<ul class="space-y-3 list-none p-0">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-medical-success" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Hızlı Teşhis:</strong> Acil durumlarda kritik müdahale için sadece 2 dakikada laboratuvar kalitesinde sonuçlar.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-medical-success" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Kullanım Kolaylığı:</strong> Sıvı kalibrasyon gerektirmez, bakım personeli ihtiyacını ortadan kaldırır.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-medical-success" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Düşük Örnek Hacmi:</strong> Küçük hayvan hastaları için ideal olan minimal kan örneği (100μL) ile çalışma.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Sidebar / Related Assets -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-8">
+<div class="bg-surface-container-low p-6 rounded-xl border border-subtle">
+<h4 class="font-headline-md text-on-surface mb-4">İlgili Ürünler</h4>
+<div class="space-y-4">
+<!-- Related Item 1 -->
+<a class="group flex gap-4 p-3 bg-white rounded-lg border border-transparent hover:border-primary transition-all shadow-sm" href="#">
+<div class="w-16 h-16 bg-surface flex-shrink-0 rounded flex items-center justify-center p-1">
+<img class="max-w-full max-h-full object-contain" alt="Modern veterinary hematology analyzer, sleek and compact lab equipment on white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVs38Eu1PDoH_yvykxQA5wSH9Y3jF4CNdwOB-u-XfSQURG_EfHo6JQLlqJh2JQ_MGnQqtjIUEXIJsCH-fHn8ae-k6sK6-HeDPPABGpzdgYJdkXPFBFcP4Mb1vwBFlY1pQnie3Ia0QgE8wGh-HFrm86CcSIXh3tf3ZUHbc-JcILGbFxrPM-d1pTKqxnj3SGYPwpjbs1pq-4UpuJYoeO-nzhHh-otYDZou_tUw35SfDgZjoxi3E9AyJRJsoLS0xTH5ci6MewHWSIMrbW"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-md text-on-surface group-hover:text-primary transition-colors">Veteriner Kan Sayım Cihazı</span>
+<span class="text-xs text-on-surface-variant">Hematoloji Çözümleri</span>
+</div>
+</a>
+<!-- Related Item 2 -->
+<a class="group flex gap-4 p-3 bg-white rounded-lg border border-transparent hover:border-primary transition-all shadow-sm" href="#">
+<div class="w-16 h-16 bg-surface flex-shrink-0 rounded flex items-center justify-center p-1">
+<img class="max-w-full max-h-full object-contain" alt="Professional benchtop veterinary biochemistry analyzer with automated system and reagent trays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVJxOIzTXFlNpgB8jVaQlG_9md1HQdEBYP2TTW3PID4FLNWIM08HGSpvdylihU2nFPOxwDjvkc_cs67YS4mQqdExgqnkpKfDHA5HyIvtdd_XO5YqrGr-rTPtk5wRIbkvoq_afNtx0LN41TsS7Uj7C1_p-_8Uw1vIzCCZnQwoBWTfyfoctQJ70UaHcUgM8WKC498GVnuNtbSmimu47rhQzLzHOq-_NTyNjSIvVd9unpeLhmgdea59JJIOI94ppY3Ig5O5RFxzKvcXjx"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-md text-on-surface group-hover:text-primary transition-colors">Biyokimya Cihazı</span>
+<span class="text-xs text-on-surface-variant">Tam Otomatik Sistemler</span>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-primary text-white p-6 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-md mb-2">Destek Hattı</h4>
+<p class="text-on-primary-container text-sm mb-4">Cihaz kurulumu ve teknik destek için uzman ekibimize ulaşın.</p>
+<a class="inline-flex items-center gap-2 font-bold text-lg hover:underline" href="tel:+9000000000">
+<span class="material-symbols-outlined">support_agent</span>
+                                444 0 XXX
+                            </a>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-9xl">biotech</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-[#0d0d0d] border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 bg-[#e63946] rounded flex items-center justify-center">
+            <span class="text-white font-black text-sm">M</span>
+          </div>
+          <span class="text-white font-bold text-xl">Makrosel <span class="text-gray-500 font-light">Group</span></span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+          Tibbi tani ve laboratuvar cozumlerinde 20 yili askin deneyim. Turkiye'nin guvenilir tibbi tani tedarikcisi.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Urunler</h4>
+        <ul class="space-y-3">
+          <li><a href="elisa-kitleri.html" class="text-gray-500 hover:text-white text-sm transition-colors">ELISA Kitleri</a></li>
+          <li><a href="pe-7100-lazer-kan-sayim.html" class="text-gray-500 hover:text-white text-sm transition-colors">Kan Sayim Cihazlari</a></li>
+          <li><a href="veteriner-kan-gazi.html" class="text-gray-500 hover:text-white text-sm transition-colors">Veteriner Urunleri</a></li>
+          <li><a href="ure-nefes-testi-c13.html" class="text-gray-500 hover:text-white text-sm transition-colors">Ure Nefes Testi</a></li>
+          <li><a href="urunler.html" class="text-gray-500 hover:text-white text-sm transition-colors">Biyokimya Kitleri</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Kurumsal</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html#hakkimizda" class="text-gray-500 hover:text-white text-sm transition-colors">Hakkimizda</a></li>
+          <li><a href="urunler.html" class="text-gray-500 hover:text-white text-sm transition-colors">Markalar</a></li>
+          <li><a href="index.html#iletisim" class="text-gray-500 hover:text-white text-sm transition-colors">Iletisim</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">Iletisim</h4>
+        <ul class="space-y-4">
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] mt-0.5 flex-shrink-0">location_on</span>
+            <span class="text-gray-500 text-sm leading-relaxed">Mimar Sinan Mah. Caglayan Sok. 9/5<br>34782 Cekmekoy / Istanbul</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">call</span>
+            <div class="flex flex-col gap-0.5">
+              <a href="tel:+902166062939" class="text-gray-400 hover:text-white text-sm transition-colors font-medium">0(216) 606 29 39</a>
+              <a href="tel:+908503045606" class="text-gray-500 hover:text-white text-sm transition-colors">0(850) 304 56 06</a>
+              <a href="tel:+905074299021" class="text-gray-500 hover:text-white text-xs transition-colors">+90 507 429 90 21 <span class="text-[#e63946]">(Acil)</span></a>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">mail</span>
+            <a href="mailto:info@makroselgroup.com" class="text-gray-500 hover:text-white text-sm transition-colors">info@makroselgroup.com</a>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-gray-600 text-[18px] flex-shrink-0">schedule</span>
+            <span class="text-gray-500 text-sm">Hft ici 09:00-18:00<br>Cumartesi 09:00-13:00<br><span class="text-[#e63946] font-medium">Teknik Servis 7/24</span></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+      <p>&#169; 2024 Makrosel Group. Tum haklari saklidir.</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@makroselgroup.com" class="hover:text-gray-400 transition-colors">Gizlilik Politikasi</a>
+        <a href="index.html#iletisim" class="hover:text-gray-400 transition-colors">Site Haritasi</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+        // Micro-interactions for product cards and buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.style.transform = 'scale(0.98)';
+            });
+            el.addEventListener('mouseup', () => {
+                el.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal for table
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const technicalTable = document.querySelector('table').parentElement;
+        technicalTable.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+        observer.observe(technicalTable);
+    </script>
+<script>
+  (function(){
+    var btn = document.getElementById('hamburger');
+    if (btn) btn.addEventListener('click', function(){
+      var m = document.getElementById('mobile-menu');
+      m.style.display = m.style.display === 'none' ? 'block' : 'none';
+    });
+    window.addEventListener('scroll', function(){
+      var nav = document.getElementById('navbar');
+      if (!nav) return;
+      nav.classList.toggle('shadow-xl', window.scrollY > 40);
+    });
+    document.addEventListener('click', function(e){
+      if (!e.target.closest('.mega-trigger')) {
+        document.querySelectorAll('.mega-menu').forEach(function(m){ m.style.display = ''; });
+      }
+    });
+  })();
+</script>
+</body></html>
