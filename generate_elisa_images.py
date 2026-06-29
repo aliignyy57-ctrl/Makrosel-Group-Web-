@@ -11,19 +11,11 @@ OUT = '/Users/mac/Desktop/makrosel/assets/images/elisa/'
 os.makedirs(OUT, exist_ok=True)
 
 CATEGORIES = [
-    ('human',   'Professional laboratory ELISA test kit for human diagnostics, medical blue tones, clean white background, scientific product photography, 96-well microplate, antibody vials, pipette'),
-    ('mouse',   'Laboratory mouse ELISA immunoassay kit, scientific research, blue medical tones, white background, professional product photo, 96-well plate, pipette, laboratory equipment'),
-    ('rat',     'Laboratory rat ELISA immunoassay kit, scientific research, blue tones, clean white background, 96-well plate, pipette, professional laboratory product photography'),
-    ('rabbit',  'Rabbit ELISA kit laboratory immunology research, medical blue tones, white background, scientific product photography, antibody detection kit, microplate'),
-    ('bovine',  'Bovine cattle ELISA kit veterinary diagnostics, blue medical tones, white background, professional scientific photography, immunoassay microplate, laboratory'),
-    ('sheep',   'Sheep ovine ELISA kit veterinary laboratory, blue tones, clean white background, scientific product photo, immunoassay detection kit, 96-well plate'),
-    ('goat',    'Goat caprine ELISA kit veterinary research, medical blue tones, white background, professional laboratory photography, 96-well microplate, scientific'),
-    ('horse',   'Horse equine ELISA kit veterinary diagnostics, blue tones, white background, scientific product photography, immunoassay research kit, laboratory'),
-    ('chicken', 'Chicken avian ELISA kit poultry research, laboratory blue tones, clean white background, scientific product photo, antibody detection microplate, professional'),
-    ('dog',     'Canine dog ELISA kit veterinary diagnostics, blue medical tones, white background, professional scientific photography, immunoassay detection, laboratory'),
-    ('cat',     'Feline cat ELISA kit veterinary laboratory, blue tones, clean white background, scientific product photography, immunoassay kit, 96-well plate'),
-    ('pig',     'Porcine pig ELISA kit veterinary research, medical blue tones, white background, professional laboratory photo, 96-well microplate immunoassay, scientific'),
-    ('monkey',  'Primate monkey ELISA kit biomedical research, blue tones, clean white background, scientific product photography, immunoassay laboratory, medical'),
+    ('donkey',     'Donkey equine ELISA kit, veterinary diagnostics, blue medical tones, laboratory'),
+    ('guinea_pig', 'Guinea pig ELISA kit, laboratory research, blue medical tones'),
+    ('hamster',    'Hamster ELISA kit, laboratory animal research, blue medical tones'),
+    ('zebrafish',  'Zebrafish ELISA kit, aquatic research, blue medical tones'),
+    ('duck',       'Duck avian ELISA kit, poultry veterinary research, blue medical tones'),
 ]
 
 def api(method, path, data=None):
@@ -122,26 +114,16 @@ while len(done) < len(task_ids) and (time.time() - start) < MAX_WAIT:
         status = data.get('status') or data.get('state') or '?'
 
         if status in ('SUCCESS', 'success', 'COMPLETED', 'completed', 2, '2', 'FINISHED'):
-            # Görsel URL bul
+            # Görsel URL bul - resultJson içinde resultUrls listesi
             img_url = None
-            for path_keys in [
-                ['response', 'imageUrl'], ['imageUrl'], ['url'],
-                ['output', 'url'], ['result', 'url'], ['images', 0, 'url'],
-                ['response', 'images', 0, 'url'],
-            ]:
-                obj = data
-                for k in path_keys:
-                    if isinstance(obj, dict):
-                        obj = obj.get(k)
-                    elif isinstance(obj, list) and isinstance(k, int):
-                        obj = obj[k] if k < len(obj) else None
-                    else:
-                        obj = None
-                    if obj is None:
-                        break
-                if isinstance(obj, str) and obj.startswith('http'):
-                    img_url = obj
-                    break
+            result_json_str = data.get('resultJson', '{}')
+            try:
+                result_obj = json.loads(result_json_str)
+                urls = result_obj.get('resultUrls', [])
+                if urls:
+                    img_url = urls[0]
+            except Exception:
+                pass
 
             if img_url:
                 # Uzantıyı URL'den belirle
